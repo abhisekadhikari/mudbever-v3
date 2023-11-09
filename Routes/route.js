@@ -6,6 +6,7 @@ const servicesController = require("../Controllers/services")
 const internshipController = require("../Controllers/internship")
 const requirementController = require("../Controllers/requirement")
 const appointmentController = require("../Controllers/appointment")
+const techniquesController = require("../Controllers/techniquesController")
 
 // Index Page
 
@@ -33,12 +34,6 @@ router.get("/teams", (req, res) => {
 
 router.get("/internship", internshipController.internship)
 
-// 404 - Not Found
-
-router.get("*", (req, res) => {
-  res.render("pages/404")
-})
-
 // Post Requests
 
 // 1. Contact
@@ -61,5 +56,13 @@ router.post("/requirements", requirementController)
 router.post("/appointment", appointmentController)
 
 // End Post Requests
+
+router.get("/techniques", (req, res) => {
+  res.render("pages/techniques")
+})
+
+router.get("*", (req, res) => {
+  res.render("pages/404")
+})
 
 module.exports = router
