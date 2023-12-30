@@ -7,6 +7,7 @@ const internshipController = require("../Controllers/internship")
 const requirementController = require("../Controllers/requirement")
 const appointmentController = require("../Controllers/appointment")
 const techniquesController = require("../Controllers/techniquesController")
+const uploader = require("../utils/multer")
 
 // Index Page
 
@@ -45,7 +46,11 @@ router.post("/services", servicesController.servicesPost)
 
 // 3. Internship
 
-router.post("/internship", internshipController.internshipData)
+router.post(
+  "/internship",
+  uploader.single("image"),
+  internshipController.internshipData
+)
 
 router.get("/internship-data", internshipController.getInternshipData)
 

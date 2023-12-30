@@ -52,7 +52,7 @@
         <h1 class="display-4 text-white animated slideInDown mb-4">Internship</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
             <li class="breadcrumb-item text-primary active" aria-current="page">Internship</li>
           </ol>
@@ -100,8 +100,10 @@
             </svg>
             Internship Form
           </h1>
-          <p>We offer internships for students</p>
-          <form action="/internship" method="post">
+          <p>Our in campus training/workshop is live <br>
+            Comprehensive Netural Building Solution
+          </p>
+          <form action="/internship" enctype="multipart/form-data" method="post">
             <div class="nice-form-group">
               <label>Name</label>
               <input type="text" placeholder="Your name" value="" name="name" required />
@@ -143,24 +145,28 @@
             </div>
 
             <div class="nice-form-group">
-                <label>Institution</label>
-                <select name="institution"  required>
-                  <option disabled>Select Institution</option>
-                  <option>Sikkim Institute Of Science and Technology</option>
-                </select>
-              </div>
+              <label>Institution</label>
+              <select name="institution" required>
+                <option disabled>Select Institution</option>
+                <option>Sikkim Institute Of Science and Technology</option>
+              </select>
+            </div>
+            <div class="nice-form-group">
 
-            <!-- <div class="nice-form-group">
-                <label>Upload Your Resume</label>
-                <input type="file" />
-              </div> -->
-        </section>
-
-
-        <div class="col-12">
-          <button class="btn btn-primary w-100 py-3" type="submit" style="background-color: #964B00;">Submit</button>
-        </div>
-
+              <img src="/img/qr_code.jpg" class="img-fluid" alt="QR CODE" sizes="" srcset="">
+            </div>
+            <div class="nice-form-group">
+              <label>Upload a screenshot of payment</label>
+              <input type="file"  name="image" accept=".png, .jpeg" required />
+            </div>
+          </section>
+          
+          
+          <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit" style="background-color: #964B00;">Submit</button>
+          </div>
+          
+        </form>
 
 
 

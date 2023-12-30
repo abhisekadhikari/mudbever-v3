@@ -37,6 +37,10 @@ const internshipSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  screenshot: {
+    type: String,
+    required: true,
+  },
 })
 
 module.exports = new mongoose.model("internship", internshipSchema)

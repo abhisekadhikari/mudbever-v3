@@ -10,8 +10,8 @@ require("dotenv").config()
 
 const app = express()
 port = process.env.PORT || 3000
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true, limit: "100mb" }))
+app.use(bodyParser.json({ limit: "100mb" }))
 
 app.use((err, req, res, next) => {
   res.status(500).send("Something broke!")
