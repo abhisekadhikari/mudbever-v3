@@ -27,7 +27,8 @@ const internshipData = async (req, res, next) => {
       !city ||
       !region ||
       !zip_code ||
-      !institution
+      !institution ||
+      !req.file
     )
       return res.json({ message: "Fill All The Fields" })
     const imagePath = req.file.path
