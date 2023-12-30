@@ -13,6 +13,10 @@ port = process.env.PORT || 3000
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+app.use((err, req, res, next) => {
+  res.status(500).send("Something broke!")
+})
+
 // View Engine
 
 app.set("view engine", "ejs")

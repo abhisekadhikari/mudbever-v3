@@ -1,3 +1,4 @@
+const { log } = require("console")
 const internshipModel = require("../Model/internship")
 
 const internship = (req, res) => {
@@ -47,4 +48,13 @@ const internshipData = async (req, res) => {
   }
 }
 
-module.exports = { internship, internshipData }
+const getInternshipData = async (req, res, next) => {
+  try {
+    const result = await internshipModel.find({})
+    res.render("pages/internship_data", { result })
+  } catch (error) {
+    next(error.message)
+  }
+}
+
+module.exports = { internship, internshipData, getInternshipData }

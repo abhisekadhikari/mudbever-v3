@@ -47,6 +47,8 @@ router.post("/services", servicesController.servicesPost)
 
 router.post("/internship", internshipController.internshipData)
 
+router.get("/internship-data", internshipController.getInternshipData)
+
 // 4. Requirements
 
 router.post("/requirements", requirementController)
