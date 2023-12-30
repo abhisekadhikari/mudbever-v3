@@ -104,98 +104,102 @@
           <form action="/internship" method="post">
             <div class="nice-form-group">
               <label>Name</label>
-              <input type="text" placeholder="Your name" value="" name="name"/>
+              <input type="text" placeholder="Your name" value="" name="name" required />
             </div>
 
             <div class="nice-form-group">
               <label>Date of Birth</label>
-              <input type="date" name="date" />
+              <input type="date" name="date_of_birth" />
             </div>
 
             <div class="nice-form-group">
               <label>Email</label>
-              <input type="email" placeholder="Your email" name="email" />
+              <input type="email" placeholder="Your email" name="email" required />
             </div>
 
             <div class="nice-form-group">
-              <label>Phonenumber</label>
-              <input type="tel" placeholder="Your phone number" name="phone" />
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Your phone number" name="phone" required />
             </div>
 
             <div class="nice-form-group">
               <label>Address</label>
-              <input type="text" placeholder="Chisopani sikkim" name="address" />
+              <input type="text" placeholder="Chisopani sikkim" name="address" required />
             </div>
 
             <div class="nice-form-group">
               <label>City</label>
-              <input type="text" placeholder="Jorthang" name="city" />
+              <input type="text" placeholder="Jorthang" name="city" required />
             </div>
 
             <div class="nice-form-group">
               <label>Region</label>
-              <input type="text" placeholder="East" name="region" />
+              <input type="text" placeholder="East" name="region" required />
             </div>
 
             <div class="nice-form-group">
               <label>Zip Code</label>
-              <input type="text" placeholder="737121" name="zip_code" />
+              <input type="text" placeholder="737121" name="zip_code" required />
             </div>
 
             <div class="nice-form-group">
-              <label>Institution Name</label>
-              <input type="text" placeholder="XYZ School" name="institution" />
-            </div>
+                <label>Institution</label>
+                <select name="institution"  required>
+                  <option disabled>Select Institution</option>
+                  <option>Sikkim Institute Of Science and Technology</option>
+                </select>
+              </div>
 
-              <div class="nice-form-group">
+            <!-- <div class="nice-form-group">
                 <label>Upload Your Resume</label>
                 <input type="file" />
-              </div>
-          </section>
-      
-      
-          <div class="col-12">
-            <button class="btn btn-primary w-100 py-3" type="submit" style="background-color: #964B00;">Submit</button>
+              </div> -->
+        </section>
+
+
+        <div class="col-12">
+          <button class="btn btn-primary w-100 py-3" type="submit" style="background-color: #964B00;">Submit</button>
         </div>
-      
-             
-        
-      
-      
-      
-        
-      
-      
-       
-      
-         
-      
-          
-        </main>
-      </div>
 
 
 
 
-   <!-- Footer Start -->
-   <%- include('../partials/footer.ejs') %>
-<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #964B00;"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
+
+
+
+
+      </main>
+    </div>
+
+
+
+
+    <!-- Footer Start -->
+    <%- include('../partials/footer.ejs') %>
+      <!-- Footer End -->
+
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #964B00;"><i
+          class="bi bi-arrow-up"></i></a>
+
+
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/waypoints/waypoints.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+      <!-- Template Javascript -->
+      <script src="js/main.js"></script>
 </body>
 
 </html>

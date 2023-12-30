@@ -42,7 +42,7 @@ const internshipData = async (req, res) => {
       institution,
     })
     await internData.save()
-    res.status(200).json({ message: "Successfully Sent" })
+    res.status(200).send("<h1>Thank You for your response</h1>")
   } catch (error) {
     return res.status(400).json({ message: error.message })
   }
