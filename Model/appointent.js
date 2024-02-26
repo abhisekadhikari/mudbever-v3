@@ -22,6 +22,11 @@ const appointmentSchema = mongoose.Schema(
             type: String,
             require: true,
         },
+
+        date: {
+            type: Date,
+            default: new Date(),
+        },
     },
     { timestamps: true }
 )

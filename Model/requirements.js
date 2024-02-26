@@ -42,6 +42,11 @@ const requirementSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+
+        date: {
+            type: Date,
+            default: new Date(),
+        },
     },
     { timestamps: true }
 )
