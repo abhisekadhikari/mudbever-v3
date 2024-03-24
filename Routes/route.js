@@ -8,6 +8,7 @@ const requirementController = require("../Controllers/requirement")
 const appointmentController = require("../Controllers/appointment")
 const techniquesController = require("../Controllers/techniquesController")
 const uploader = require("../utils/multer")
+const {blog} = require("../Controllers/blog")
 
 // Index Page
 
@@ -36,6 +37,9 @@ router.get("/teams", (req, res) => {
 router.get("/internship", internshipController.internship)
 
 // Post Requests
+
+//blog page route
+router.get("/blog", blog)
 
 // 1. Contact
 router.post("/contact", contact.contactData)
