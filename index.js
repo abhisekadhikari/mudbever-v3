@@ -28,7 +28,7 @@ app.use(require("./Routes/route"))
 
 // Mongo Database Connection
 
-DB_link = process.env.MONGODB_URL
+DB_link = process.env.MONGO_URI
 
 mongoose
   .connect(DB_link)
