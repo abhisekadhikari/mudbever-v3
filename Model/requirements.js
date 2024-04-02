@@ -48,7 +48,7 @@ const requirementSchema = new mongoose.Schema(
             default: new Date(),
         },
     },
-    { timestamps: true }
+    { timestamps: true },
 )
 
 module.exports = new mongoose.model("requirements", requirementSchema)

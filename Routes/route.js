@@ -8,7 +8,7 @@ const requirementController = require("../Controllers/requirement")
 const appointmentController = require("../Controllers/appointment")
 const techniquesController = require("../Controllers/techniquesController")
 const uploader = require("../utils/multer")
-const {blog} = require("../Controllers/blog")
+const { blog } = require("../Controllers/blog")
 
 // Index Page
 
@@ -29,7 +29,7 @@ router.get("/services", servicesController.services)
 // Teams Page
 
 router.get("/teams", (req, res) => {
-  res.render("pages/team")
+    res.render("pages/team")
 })
 
 // Internship Page
@@ -51,9 +51,9 @@ router.post("/services", servicesController.servicesPost)
 // 3. Internship
 
 router.post(
-  "/internship",
-  uploader.single("image"),
-  internshipController.internshipData
+    "/internship",
+    uploader.single("image"),
+    internshipController.internshipData,
 )
 
 router.get("/internship-data", internshipController.getInternshipData)
@@ -69,11 +69,11 @@ router.post("/appointment", appointmentController)
 // End Post Requests
 
 router.get("/techniques", (req, res) => {
-  res.render("pages/techniques")
+    res.render("pages/techniques")
 })
 
 router.get("*", (req, res) => {
-  res.render("pages/404")
+    res.render("pages/404")
 })
 
 module.exports = router

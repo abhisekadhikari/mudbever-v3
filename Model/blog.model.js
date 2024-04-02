@@ -15,7 +15,7 @@ const blogSchema = new mongoose.Schema(
         image: [],
         imageId: [],
     },
-    { timestamps: true }
+    { timestamps: true },
 )
 
 const BlogModel = mongoose.model("blog", blogSchema)
